@@ -1,4 +1,4 @@
 {
-  "cnc_host": "hard-appendix.gl.at.ply.gg",
+  "cnc_host": "localhost",
   "cnc_port": 47545
 }
